@@ -8,6 +8,6 @@ A documentação será mantida de forma contínua ao longo do desenvolvimento do
 
 Analisar esse txt, da aula 26/06/26, esse arquivo é importante para a documentação
 
-# Exemplo Documentação Técnica 
+# Documentação Técnica 
 
 Essencial para a criação da nossa documentação, revisem todos os dias.
