@@ -1,18 +1,18 @@
 # EduConnect
 
-## 📖 Sobre o Projeto
+## Sobre o Projeto
 
-O **EduConnect** é um sistema desenvolvido com o objetivo de conectar alunos, professores e instituições de ensino por meio de uma plataforma intuitiva e eficiente. O projeto busca facilitar a comunicação, o gerenciamento de informações acadêmicas e o compartilhamento de conteúdos educacionais.
+O **EduConnect** é um sistema de gestão escolar desenvolvido para centralizar os principais processos administrativos e acadêmicos de uma instituição de ensino. A plataforma permite o gerenciamento de alunos, professores, turmas, notas, frequência e comunicação entre a escola, os estudantes e seus responsáveis, proporcionando maior organização, eficiência e acessibilidade às informações.
 
 ---
 
-# 📋 Estrutura do Projeto
+# Estrutura do Projeto
 
 ## 1. Visão Geral do Sistema
 
 **Responsáveis:** Todos os integrantes
 
-Apresentação do sistema, descrevendo seu propósito, funcionalidades principais, público-alvo e benefícios.
+Apresentação do sistema, incluindo sua finalidade, público-alvo, principais funcionalidades, benefícios e contexto de utilização.
 
 ---
 
@@ -20,7 +20,7 @@ Apresentação do sistema, descrevendo seu propósito, funcionalidades principai
 
 **Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
 
-Análise da viabilidade do projeto, considerando aspectos técnicos, financeiros e operacionais.
+Análise da viabilidade do projeto, considerando aspectos técnicos, financeiros, operacionais e a possibilidade de implementação da solução.
 
 ---
 
@@ -28,8 +28,7 @@ Análise da viabilidade do projeto, considerando aspectos técnicos, financeiros
 
 **Responsáveis:** Arthur Emmerich, Gabriel Garcia e Pedro Carvalho
 
-Definir as funcionalidades utilizadas no sistemas e explicar como funcionam de jeito direto e indireto.
-
+Descrição das funcionalidades implementadas no sistema, detalhando o funcionamento de cada uma e sua contribuição para os processos de gestão escolar.
 
 ---
 
@@ -37,7 +36,7 @@ Definir as funcionalidades utilizadas no sistemas e explicar como funcionam de j
 
 **Responsáveis:** Todos os integrantes
 
-Definição dos objetivos gerais e específicos do sistema, destacando os resultados esperados.
+Definição dos objetivos gerais e específicos do projeto, destacando os resultados esperados com a implementação do sistema.
 
 ---
 
@@ -45,7 +44,7 @@ Definição dos objetivos gerais e específicos do sistema, destacando os result
 
 **Responsáveis:** Gabriel Garcia e Nicollas Duarte
 
-Descrição das regras que orientam o funcionamento do sistema e garantem o atendimento aos requisitos do projeto.
+Descrição das regras que definem o comportamento do sistema e garantem o correto funcionamento dos processos acadêmicos e administrativos.
 
 ---
 
@@ -53,7 +52,7 @@ Descrição das regras que orientam o funcionamento do sistema e garantem o aten
 
 **Responsáveis:** Gabriel Garcia e Nicollas Duarte
 
-Especificação dos requisitos relacionados ao desempenho, segurança, usabilidade, disponibilidade e manutenção do sistema.
+Especificação dos requisitos relacionados ao desempenho, segurança, usabilidade, disponibilidade, confiabilidade e manutenção do sistema.
 
 ---
 
@@ -61,7 +60,7 @@ Especificação dos requisitos relacionados ao desempenho, segurança, usabilida
 
 **Responsável:** Arthur Emmerich
 
-Apresentação dos protótipos de interface que demonstram a estrutura visual e a navegação do sistema.
+Apresentação dos protótipos de interface que demonstram a estrutura visual do sistema, a navegação entre as telas e a experiência do usuário.
 
 ---
 
@@ -69,11 +68,11 @@ Apresentação dos protótipos de interface que demonstram a estrutura visual e 
 
 **Responsáveis:** Ryan Nunes e Rafael Oschvat
 
-Elaboração da documentação completa do projeto, incluindo detalhes técnicos, funcionamento e orientações de utilização.
+Desenvolvimento da documentação técnica e funcional do projeto, contendo informações sobre arquitetura, utilização, estrutura do sistema e demais aspectos relevantes para seu entendimento e manutenção.
 
 ---
 
-# 👥 Integrantes da Equipe
+# Integrantes da Equipe
 
 * Arthur Emmerich
 * Gabriel Garcia
@@ -84,15 +83,16 @@ Elaboração da documentação completa do projeto, incluindo detalhes técnicos
 
 ---
 
-## 🚀 Tecnologias
+# Tecnologias Utilizadas
 
-* HTML
-* CSS
+* HTML5
+* CSS3
 * JavaScript
-* Git e GitHub
+* Git
+* GitHub
 
 ---
 
-## 📌 Status do Projeto
+# Status do Projeto
 
-🚧 Em desenvolvimento.
+**Em desenvolvimento.**
