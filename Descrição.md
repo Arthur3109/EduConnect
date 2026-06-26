@@ -1,44 +1,43 @@
-# 📚 EduConnect – Plataforma de Gestão Escolar Integrada
+# EduConnect – Plataforma de Gestão Escolar Integrada
 
-## 📖 Descrição do Projeto
+## Descrição do Projeto
 
-O **EduConnect** é uma plataforma web de gestão escolar desenvolvida para centralizar e otimizar os principais processos administrativos e acadêmicos de uma instituição de ensino. O sistema reúne, em um único ambiente, o gerenciamento de alunos, professores, turmas, notas, frequência e comunicação entre a escola, os estudantes e seus responsáveis.
+O **EduConnect** é uma plataforma web desenvolvida para integrar e modernizar os processos de gestão escolar. O sistema centraliza informações acadêmicas e administrativas em um único ambiente, permitindo o gerenciamento de alunos, professores, turmas, notas, frequência e comunicação entre a instituição de ensino, os estudantes e seus responsáveis.
 
-Seu principal objetivo é digitalizar a gestão escolar, tornando os processos mais rápidos, organizados e acessíveis, além de fortalecer a comunicação entre todos os envolvidos no ambiente educacional.
+O projeto tem como finalidade oferecer uma solução eficiente para a administração escolar, promovendo maior organização, transparência e agilidade nos processos, além de facilitar o acompanhamento do desempenho acadêmico dos alunos.
 
-## 🎯 Objetivo
+## Objetivo
 
-* Digitalizar os processos administrativos e acadêmicos da escola.
-* Melhorar a comunicação entre escola, professores, alunos e responsáveis.
-* Facilitar o acompanhamento do desempenho escolar.
-* Reduzir o uso de documentos físicos e aumentar a eficiência da gestão.
+O principal objetivo do EduConnect é digitalizar a gestão escolar, proporcionando uma plataforma que simplifique os processos administrativos e acadêmicos, melhore a comunicação entre a escola e a comunidade escolar e contribua para uma gestão mais eficiente e organizada.
 
-## ⚙️ Principais Funcionalidades
+## Principais Funcionalidades
 
-* Cadastro de alunos, professores e turmas.
-* Lançamento e gerenciamento de notas.
+* Cadastro e gerenciamento de alunos, professores e turmas.
+* Registro e gerenciamento de notas.
 * Controle de frequência dos alunos.
-* Portal do aluno e dos responsáveis.
-* Envio de comunicados e avisos.
+* Portal de acesso para alunos e responsáveis.
+* Envio de comunicados e avisos institucionais.
 * Emissão automática de boletins escolares.
 
-## 👥 Usuários do Sistema
+## Usuários do Sistema
+
+O sistema é destinado aos seguintes perfis de usuários:
 
 * Administradores
 * Professores
 * Alunos
 * Responsáveis
 
-## 🔄 Fluxos Essenciais
+## Fluxos Essenciais
 
-1. O professor lança as notas e a frequência dos alunos.
-2. O sistema calcula automaticamente a média final.
-3. O boletim é gerado e disponibilizado no portal.
-4. O responsável acessa o portal para acompanhar o desempenho do aluno.
+* O professor registra as notas e a frequência dos alunos.
+* O sistema realiza o cálculo automático das médias.
+* Após o processamento das informações, o boletim é disponibilizado para consulta.
+* Os responsáveis acessam o portal para acompanhar o desempenho acadêmico e a frequência do aluno.
 
-## 📌 Regras de Negócio
+## Regras de Negócio
 
-* As notas podem ser alteradas apenas até o fechamento do bimestre.
-* Cada aluno pode estar matriculado em apenas uma turma por período letivo.
-* Apenas professores autorizados podem lançar ou alterar notas e frequência de suas turmas.
-* Administradores possuem acesso completo às funcionalidades de gerenciamento do sistema.
+* As notas poderão ser alteradas somente até o encerramento do respectivo bimestre.
+* Cada aluno poderá estar vinculado a apenas uma turma durante um mesmo período letivo.
+* Apenas professores responsáveis pela turma poderão registrar ou alterar notas e frequência.
+* Administradores terão acesso às funcionalidades de gerenciamento e manutenção do sistema.
