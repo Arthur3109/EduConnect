@@ -1,141 +1,319 @@
-1. Sobre o Projeto
-O EduConnect é um sistema desenvolvido para automatizar as operações de uma farmácia (estudo de caso), substituindo processos manuais por uma plataforma integrada que gerencia vendas, estoque, caixa, preços e usuários.
-Este repositório contém exclusivamente os documentos técnicos do projeto, incluindo:
+# 📚 EduConnect – Documentação Técnica
 
-Visão geral do sistema
+> Repositório destinado ao gerenciamento da documentação técnica do projeto **EduConnect**, seguindo um padrão de versionamento e controle de alterações.
 
-Estudo de viabilidade
+---
 
-Requisitos funcionais e não funcionais
+# 📖 Sobre o Projeto
 
-Regras de negócio
+O **EduConnect** é um sistema desenvolvido para automatizar as operações de uma **farmácia** (estudo de caso), substituindo processos manuais por uma plataforma integrada para gerenciamento de:
 
-Histórico de revisões
+* 💰 Vendas
+* 📦 Estoque
+* 💵 Caixa
+* 🏷️ Preços
+* 👥 Usuários
 
-2. Estrutura dos Documentos
-Todos os documentos técnicos seguem o modelo base presente no arquivo DocumentacaoTecnicaXXXXX.docx (onde XXXXX é o código de versão, ex.: X-0001).
-Cada documento contém:
+Este repositório contém **exclusivamente a documentação técnica** do projeto.
 
-Cabeçalho com título, código do documento, nomes dos autores e data da última atualização.
+## Documentos disponíveis
 
-Histórico de revisões (tabela com data, versão, descrição da alteração e autor).
+* Visão Geral do Sistema
+* Estudo de Viabilidade
+* Requisitos Funcionais
+* Requisitos Não Funcionais
+* Regras de Negócio
+* Histórico de Revisões
 
-Identificação dos envolvidos (papel, nome e e-mail).
+---
 
-Corpo do documento (visão geral, requisitos, regras, etc.).
+# 📂 Estrutura dos Documentos
 
-3. Como Atualizar um Documento
-Sempre que houver uma alteração no conteúdo (adição, correção, melhoria ou reorganização), você deve atualizar o documento seguindo o procedimento abaixo. Isso garante que o histórico reflita fielmente a evolução do projeto.
+Todos os documentos seguem como base o modelo:
 
-3.1. Fluxo Geral
-Identifique a necessidade de mudança
+```text
+DocumentacaoTecnicaX-0001.docx
+```
 
-Correção de erros
+Cada documento possui:
 
-Inclusão de novos requisitos
+* Cabeçalho
 
-Ajuste de regras de negócio
+  * Título
+  * Código do documento
+  * Autores
+  * Data da última atualização
 
-Revisão de viabilidade
+* Histórico de Revisões
 
-Organização ou formatação
+  * Data
+  * Versão
+  * Descrição
+  * Autor
 
-Faça as alterações no conteúdo do arquivo .docx (ou no formato que a equipe utiliza).
+* Identificação dos Envolvidos
 
-Atualize o cabeçalho:
+  * Papel
+  * Nome
+  * E-mail
 
-Versão: incremente o número (ex.: de X-0001 para X-0002 – ver padrão abaixo).
+* Corpo do Documento
 
-Data: coloque a data atual no formato DD/MM/AAAA.
+  * Visão Geral
+  * Requisitos
+  * Regras de Negócio
+  * Demais informações técnicas
 
-Preencha o histórico de revisões com uma nova linha:
+---
 
-Data: mesma data do cabeçalho.
+# ✏️ Como Atualizar um Documento
 
-Versão: nova versão (ex.: X-0002).
+Sempre que houver qualquer alteração relevante no documento, siga o fluxo abaixo.
 
-Descrição da alteração: resumo claro e objetivo do que foi mudado.
+## 1️⃣ Identifique a necessidade
 
-Autor: nome de quem realizou a alteração.
+A alteração pode ser:
 
-Atualize a lista de envolvidos se houver mudança de papéis ou contatos.
+* Correção de erros
+* Inclusão de novos requisitos
+* Ajuste de regras de negócio
+* Revisão de viabilidade
+* Melhorias de organização
+* Alterações de formatação
 
-Salve o documento com o novo código de versão no nome do arquivo (ex.: DocumentacaoTecnicaX-0002.docx).
+---
 
-Commite e push no repositório, com uma mensagem descritiva (ex.: docs: atualiza documentação para versão X-0002 – adiciona RN012).
+## 2️⃣ Atualize o conteúdo
 
-3.2. Padrão de Versionamento (Código do Documento)
-Utilizamos o padrão X-XXXX, onde:
+Realize as alterações normalmente no arquivo **.docx**.
 
-X indica a família do documento (para este projeto, usamos X).
+---
 
-XXXX é um número sequencial de 4 dígitos, começando em 0001.
+## 3️⃣ Atualize o cabeçalho
+
+Modifique:
+
+| Campo  | Ação                          |
+| ------ | ----------------------------- |
+| Versão | Incrementar (X-0001 → X-0002) |
+| Data   | Data atual (DD/MM/AAAA)       |
+
+---
+
+## 4️⃣ Atualize o Histórico de Revisões
+
+Adicione uma nova linha à tabela.
+
+| Data       | Versão | Descrição                      | Autor |
+| ---------- | ------ | ------------------------------ | ----- |
+| DD/MM/AAAA | X-0002 | Resumo objetivo das alterações | Nome  |
+
+---
+
+## 5️⃣ Atualize os envolvidos
+
+Caso haja mudança de responsáveis, cargos ou contatos, atualize essa seção.
+
+---
+
+## 6️⃣ Renomeie o arquivo
+
+Utilize sempre a nova versão.
+
+**Exemplo**
+
+```text
+DocumentacaoTecnicaX-0002.docx
+```
+
+---
+
+## 7️⃣ Commit e Push
+
+Utilize mensagens claras.
+
+**Exemplo**
+
+```bash
+docs: atualiza documentação para versão X-0002 - adiciona RN012
+```
+
+---
+
+# 🔢 Padrão de Versionamento
+
+Os documentos utilizam o padrão:
+
+```text
+X-XXXX
+```
+
+Onde:
+
+| Parte | Significado                     |
+| ----- | ------------------------------- |
+| X     | Família do documento            |
+| XXXX  | Número sequencial com 4 dígitos |
+
+## Exemplos
+
+| Versão | Descrição       |
+| ------ | --------------- |
+| X-0001 | Primeira versão |
+| X-0002 | Segunda versão  |
+| X-0003 | Terceira versão |
+
+> **Importante:** Nunca reutilize números de versão. Toda alteração significativa gera uma nova versão.
+
+---
+
+# 💡 Exemplo de Atualização
+
+Suponha que seja necessário:
+
+* adicionar a regra **RN012**
+* corrigir o requisito **RF003**
+
+## Cabeçalho
+
+| Campo  | Valor      |
+| ------ | ---------- |
+| Versão | X-0002     |
+| Data   | 07/08/2026 |
+
+## Histórico
+
+| Data       | Versão | Descrição                                                  | Autor    |
+| ---------- | ------ | ---------------------------------------------------------- | -------- |
+| 07/08/2026 | X-0002 | Adicionada RN012; corrigido RF003 (pesquisa por categoria) | Seu Nome |
+
+## Novo nome do arquivo
+
+```text
+DocumentacaoTecnicaX-0002.docx
+```
+
+## Commit
+
+```bash
+docs: atualiza doc para X-0002 - nova RN e correção RF003
+```
+
+---
+
+# ✅ Boas Práticas
+
+* Escreva descrições objetivas no histórico de revisões.
+* Verifique se requisitos e regras de negócio continuam consistentes.
+* Solicite revisão de outro membro antes de grandes alterações.
+* Nunca sobrescreva versões anteriores.
+* Utilize sempre datas no formato **DD/MM/AAAA**.
+* Mantenha o padrão de documentação em todos os arquivos.
+
+---
+
+# 👥 Responsabilidades
+
+Cada integrante pode propor alterações.
+
+Entretanto, mudanças que impactem:
+
+* escopo
+* arquitetura
+* estrutura geral do sistema
+
+devem ser aprovadas em reunião da equipe.
+
+## Líder de Documentação
+
+**Gabriel Henrique Lopes Garcia**
+
+Responsável por:
+
+* Aprovação das versões principais
+* Garantia da consistência da documentação
+
+## Demais membros
+
+Cada integrante pode ser responsável por partes específicas da documentação.
+
+Exemplo:
+
+| Membro | Responsabilidade  |
+| ------ | ----------------- |
+| Arthur | Visão Geral       |
+| Rafael | Requisitos        |
+| ...    | Demais documentos |
+
+---
+
+# 🛠 Ferramentas
+
+| Ferramenta         | Utilização            |
+| ------------------ | --------------------- |
+| Microsoft Word     | Edição dos documentos |
+| LibreOffice Writer | Compatível com .docx  |
+| Git                | Controle de versão    |
+| GitHub/GitLab      | Repositório da equipe |
+
+### Convenção de commits
+
+Utilize os prefixos:
+
+```text
+docs:
+fix:
+feat:
+```
 
 Exemplos:
 
-X-0001 → primeira versão
+```bash
+docs: atualiza documentação
 
-X-0002 → segunda versão
+fix: corrige requisito RF008
 
-X-0003 → terceira versão (e assim por diante)
+feat: adiciona RN015
+```
 
-Importante: Nunca reutilize um número de versão. Cada alteração significativa (mesmo que pequena) gera um novo número.
+---
 
-3.3. Exemplo Prático de Atualização
-Suponha que você precise adicionar uma nova regra de negócio (RN012) e corrigir um requisito funcional (RF003).
+# ❓ Perguntas Frequentes (FAQ)
 
-Passo 1: Edite o conteúdo – insira a nova RN e corrija RF003.
+### Posso alterar mais de uma coisa na mesma versão?
 
-Passo 2: Altere o cabeçalho:
+Sim. Basta descrever todas as alterações de forma resumida no histórico de revisões.
 
-Versão: X-0002 (se antes era X-0001)
+---
 
-Data: 07/08/2026
+### Esqueci de atualizar a versão. O que fazer?
 
-Passo 3: Adicione ao histórico de revisões:
+O revisor ou líder de documentação deverá identificar o problema antes do merge.
 
-Data	Versão	Descrição da Alteração	Autor
-07/08/2026	X-0002	Adicionada RN012; corrigido RF003 (pesquisa por categoria)	Seu Nome
-Passo 4: Renomeie o arquivo para DocumentacaoTecnicaX-0002.docx.
+Caso já tenha sido enviado ao repositório, faça um novo commit corrigindo:
 
-Passo 5: Commit com mensagem: docs: atualiza doc para X-0002 – nova RN e correção RF003.
+* versão
+* histórico de revisões
 
-4. Boas Práticas para a Documentação
-Seja descritivo no histórico: use frases curtas, mas que permitam entender o que foi alterado sem precisar abrir o documento.
+---
 
-Mantenha a coerência: se alterar um requisito, verifique se as regras de negócio e os testes (se houver) ainda estão alinhados.
+### Preciso atualizar este README quando alterar um documento?
 
-Revise antes de commitar: peça a um colega para revisar as alterações, especialmente se forem grandes.
+Não.
 
-Nunca sobrescreva versões anteriores: mantenha todos os arquivos no repositório (ou use o histórico do Git para acessar versões antigas).
+Atualize o README apenas quando houver mudanças nas instruções ou no processo de documentação.
 
-Use o mesmo padrão de datas: sempre no formato DD/MM/AAAA para evitar ambiguidades.
+---
 
-5. Responsabilidades
-Cada membro da equipe pode propor alterações, mas as atualizações que impactam o escopo ou a arquitetura do sistema devem ser validadas em reunião de equipe.
+# 📬 Contato
 
-Líder de Documentação: Gabriel Henrique Lopes Garcia (responsável por aprovar versões principais e garantir a consistência geral).
+Em caso de dúvidas sobre o processo de documentação, entre em contato com:
 
-Demais membros: podem atualizar partes específicas (ex.: Arthur cuida da visão geral, Rafael dos requisitos, etc.), sempre seguindo o fluxo descrito.
+* Líder de Documentação
+* Qualquer um dos autores listados no cabeçalho dos documentos
 
-6. Ferramentas e Ambiente
-Editor de texto recomendado: Microsoft Word / LibreOffice Writer (compatível com .docx).
+---
 
-Controle de versão: Git + GitHub/GitLab (repositório privado da equipe).
+## 📅 Última atualização
 
-Convenção de commits: utilize prefixos como docs:, fix:, feat: para facilitar a rastreabilidade.
-
-7. Perguntas Frequentes
-Posso alterar mais de uma coisa na mesma versão?
-Sim, desde que todas as alterações sejam descritas no histórico de revisões de forma resumida.
-
-E se eu esquecer de atualizar a versão?
-O revisor ou o líder de documentação deve apontar o erro antes do merge. Se já tiver sido commitado, faça um novo commit corrigindo a versão e o histórico.
-
-Preciso atualizar o README quando mudar o documento?
-Não, a menos que as instruções deste README mudem. O README serve como guia fixo.
-
-8. Contato
-Em caso de dúvidas sobre o processo de documentação, entre em contato com o líder de documentação ou com qualquer um dos autores listados no cabeçalho do documento.
-
-Última atualização deste README: 06/08/2026
+**06/08/2026**
