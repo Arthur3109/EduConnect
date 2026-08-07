@@ -316,4 +316,4 @@ Em caso de dúvidas sobre o processo de documentação, entre em contato com:
 
 ## 📅 Última atualização
 
-**06/08/2026**
+**07/08/2026**
