@@ -1,0 +1,11 @@
+EduConnect
+
+1° Criação de Wireframe para Secretaria e adição novas paginas para o professor, alterar a tela de login e de exportação de boletim adicionando, ocorrências e etc.
+
+2° Alterar visão geral, objetivo, regras de negocio para o documento ter a secretaria como prioridade no sistema para melhor gestão, implementar a função de somente a secretaria poder criar contas para alunos, professores e gestores.
+
+3° Inicio da criação da interface do sistema.
+
+4° Para pesquisa: como visão principal da interface da secretaria a gestão de todos os usuários é essencial como alunos, matérias, professores e gestores: coordenadores e orientadores, também podem adicionar alunos, alterar salas, notas, faltas e ocorrências dos alunos e professores.
+
+5° Retirar Sumários, agradecimentos e resumo.
