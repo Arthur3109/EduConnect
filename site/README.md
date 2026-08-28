@@ -1,19 +1,53 @@
-EduConnect
+# EduConnect
 
-Repositório oficial do projeto EduConnect.
+Repositório oficial do projeto **EduConnect**.
 
-Este documento apresenta as orientações que devem ser seguidas pelos programadores da empresa para desenvolvimento, atualização, organização e entrega do projeto no GitHub.
+Este README define o padrão de desenvolvimento, organização do código e processo oficial de entrega das atualizações no GitHub.
 
-📌 Objetivo
+---
 
-O GitHub é o local oficial para armazenamento e acompanhamento do código-fonte do EduConnect.
+## 📋 Índice
 
-Todo código desenvolvido ou atualizado deve ser enviado para este repositório, respeitando a estrutura de pastas e o fluxo de trabalho definido neste documento.
+- [Objetivo](#-objetivo)
+- [Estrutura do projeto](#-estrutura-do-projeto)
+- [Fluxo de desenvolvimento](#-fluxo-de-desenvolvimento)
+- [Branches](#-branches)
+- [Desenvolvimento](#-desenvolvimento)
+- [Testes](#-testes)
+- [Commits](#-commits)
+- [Envio para o GitHub](#-envio-para-o-github)
+- [Pull Request](#-pull-request)
+- [Revisão](#-revisão)
+- [Segurança](#-segurança)
+- [Documentação](#-documentação)
+- [Checklist de entrega](#-checklist-de-entrega)
+- [Comandos principais](#-comandos-principais)
+- [Regras obrigatórias](#-regras-obrigatórias)
 
-📂 Estrutura do projeto
+---
 
-Atualmente, o projeto está organizado da seguinte forma:
+## 🎯 Objetivo
 
+O GitHub é a **fonte oficial do código-fonte do EduConnect**.
+
+Todo desenvolvimento, correção ou atualização deve ser versionado e enviado para este repositório.
+
+A entrega de uma tarefa somente é considerada oficial após:
+
+1. desenvolvimento;
+2. testes;
+3. `commit`;
+4. `push` para o GitHub;
+5. criação do Pull Request;
+6. revisão;
+7. aprovação;
+8. merge na `main`.
+
+---
+
+## 📂 Estrutura do projeto
+
+```text
 EduConnect/
 │
 ├── docs/
@@ -24,10 +58,10 @@ EduConnect/
 │   │   └── Código relacionado ao servidor
 │   │
 │   ├── backend/
-│   │   └── Código da API e regras de negócio
+│   │   └── API e regras de negócio
 │   │
 │   ├── frontend/
-│   │   └── Interface e aplicação do usuário
+│   │   └── Interface da aplicação
 │   │
 │   └── README.md
 │
@@ -35,319 +69,188 @@ EduConnect/
 ├── LICENSE
 └── README.md
 
-Onde colocar cada tipo de código?
-Tipo de desenvolvimento	Local
-Front-end / interface	site/frontend/
+Onde colocar cada código?
+Área	Diretório
+Front-end	site/frontend/
 Back-end / API	site/backend/
 Servidor	site/Server/
 Documentação	docs/
-Informações gerais do projeto	README.md
-Descrição detalhada do projeto	Descrição.md
+Informações gerais	README.md
+Descrição do projeto	Descrição.md
 
-Importante: não crie novas pastas ou altere a estrutura principal do projeto sem alinhar previamente com o responsável pelo projeto.
+⚠️ Não altere a estrutura principal do projeto sem autorização do responsável técnico.
 
-🚀 Fluxo de trabalho
-
-Todo programador deve seguir o fluxo abaixo ao realizar uma atualização.
-
-Atualizar projeto
-       ↓
+🔄 Fluxo de desenvolvimento
+Tarefa
+  ↓
+Atualizar main
+  ↓
 Criar branch
-       ↓
+  ↓
 Desenvolver
-       ↓
+  ↓
 Testar
-       ↓
+  ↓
 Commit
-       ↓
-Push para o GitHub
-       ↓
-Abrir Pull Request
-       ↓
+  ↓
+Push
+  ↓
+Pull Request → main
+  ↓
 Revisão
-       ↓
+  ↓
 Aprovação
-       ↓
-Merge na main
+  ↓
+Merge
 
-1. 🔄 Atualizar o projeto local
+🌿 Branches
+Regra principal
 
-Antes de começar qualquer desenvolvimento, certifique-se de que sua versão local está atualizada.
-
-git checkout main
-git pull origin main
-
-
-Isso evita trabalhar com uma versão antiga do projeto.
-
-Verifique se existem alterações locais
-
-Antes de atualizar, também é recomendado executar:
-
-git status
-
-
-Caso existam alterações importantes que ainda não foram salvas ou enviadas, resolva-as antes de atualizar a main.
-
-2. 🌿 Criar uma branch
-
-Não faça alterações diretamente na main.
+Nunca desenvolva diretamente na main.
 
 Cada tarefa deve possuir sua própria branch.
 
-Crie uma branch específica para a tarefa:
-
-git checkout -b nome-da-tarefa
-
-
-Exemplos:
-
-git checkout -b desenvolvimento-login
-
-git checkout -b correcao-cadastro-aluno
-
-git checkout -b melhoria-dashboard
-
-Padrão recomendado
-
-Utilize os seguintes padrões:
-
-feature/nome-da-funcionalidade
-fix/nome-do-problema
-docs/nome-da-documentacao
-refactor/nome-da-alteracao
-
-Exemplos
-git checkout -b feature/login-usuario
-
-git checkout -b feature/cadastro-professor
-
-git checkout -b fix/erro-autenticacao
-
-git checkout -b docs/documentacao-api
-
-git checkout -b refactor/organizacao-backend
-
-Regras para nomes de branches
-
-Os nomes devem:
-
-ser objetivos;
-descrever a tarefa;
-evitar espaços;
-evitar caracteres especiais;
-utilizar - para separar palavras.
-
-Evite:
-
-minha branch nova
+Padrões
+Tipo	Padrão	Exemplo
+Nova funcionalidade	feature/nome	feature/login-usuario
+Correção	fix/nome	fix/erro-login
+Documentação	docs/nome	docs/documentacao-api
+Refatoração	refactor/nome	refactor/backend
+Criar uma branch
+git checkout main
+git pull origin main
+git checkout -b feature/minha-funcionalidade
 
 
-Prefira:
+Utilize nomes objetivos, sem espaços ou caracteres especiais.
 
-feature/nova-funcionalidade
-
-3. 💻 Realizar o desenvolvimento
-
-Após criar a branch, realize o desenvolvimento solicitado.
-
-Faça as alterações somente nos arquivos relacionados à tarefa.
+💻 Desenvolvimento
 
 Durante o desenvolvimento:
 
 mantenha o código organizado;
-siga o padrão utilizado no projeto;
-evite arquivos desnecessários;
-não altere funcionalidades que não fazem parte da tarefa;
-não remova código sem necessidade;
-mantenha comentários somente quando forem realmente úteis;
-atualize a documentação quando necessário;
-mantenha o projeto funcionando.
-4. 🧪 Testar as alterações
+siga os padrões existentes;
+altere somente o necessário;
+evite código duplicado;
+remova códigos de teste antes da entrega;
+mantenha a documentação atualizada;
+não altere funcionalidades fora do escopo da tarefa.
+🧪 Testes
 
-Antes de enviar qualquer atualização para o GitHub, o programador deve testar as alterações realizadas.
+Antes de criar o Pull Request, teste completamente a alteração.
 
-Verifique, no mínimo:
+Verifique:
 
-se o projeto inicia corretamente;
-se a funcionalidade desenvolvida funciona;
-se não existem erros no console;
-se não existem erros de compilação;
-se as funcionalidades existentes continuam funcionando;
-se as integrações entre front-end, back-end e servidor continuam funcionando;
-se os dados estão sendo tratados corretamente.
+ O projeto inicia corretamente;
+ A funcionalidade funciona;
+ Não existem erros de compilação;
+ Não existem erros no console;
+ As funcionalidades existentes continuam funcionando;
+ Integrações entre Front-end, Back-end e Server funcionam;
+ Cenários de erro foram testados.
+Teste também situações inválidas
 
-Sempre que possível, realize testes para os principais cenários:
+Exemplos:
 
-Cenário esperado
-Usuário realiza uma ação válida
-↓
-Sistema processa corretamente
-↓
-Resultado esperado é apresentado
-
-Cenários de erro
-
-Também devem ser testados:
-
-Dados inválidos
 Campos vazios
+Dados inválidos
 Usuário inexistente
 Senha incorreta
 Falha de conexão
 Dados duplicados
-Permissões insuficientes
+Permissão insuficiente
 
 
-Não envie código para revisão sem realizar os testes necessários.
+❗ Código não testado não deve ser entregue para revisão.
 
-5. 🔎 Verificar as alterações
+🔎 Verificar alterações
 
-Antes de realizar o commit, verifique quais arquivos foram modificados:
+Antes do commit:
 
 git status
 
 
-Também é recomendado visualizar as alterações:
+Para visualizar as alterações:
 
 git diff
 
 
-Confira se:
+Confirme se:
 
-somente os arquivos necessários foram alterados;
+somente arquivos necessários foram modificados;
 não existem arquivos temporários;
-não existem senhas ou tokens;
+não existem credenciais;
 não existem arquivos pessoais;
 não existem alterações acidentais.
-6. 💾 Fazer o commit
+💾 Commits
 
-Depois de testar e verificar as alterações, adicione os arquivos:
+As mensagens de commit devem ser claras e objetivas.
 
-git add .
-
-
-Em seguida, crie o commit:
-
-git commit -m "Descrição da alteração"
-
-Exemplos
+✅ Bons exemplos
 git commit -m "Adiciona tela de login"
 
 git commit -m "Corrige validação do cadastro"
 
 git commit -m "Implementa autenticação de usuários"
 
-git commit -m "Atualiza documentação do backend"
+git commit -m "Atualiza documentação da API"
 
-📌 Padrão das mensagens de commit
-
-A mensagem deve explicar de forma objetiva o que foi alterado.
-
-Evite
+❌ Evite
 git commit -m "alterações"
 
 git commit -m "teste"
 
-git commit -m "coisas novas"
-
 git commit -m "mudanças"
 
-Prefira
-Adiciona sistema de login
+git commit -m "coisas novas"
 
-Corrige validação de cadastro
+☁️ Envio para o GitHub
 
-Implementa recuperação de senha
+Depois de testar e realizar o commit:
 
-Atualiza documentação da API
-
-7. ☁️ Enviar o código para o GitHub
-
-Depois de criar o commit, envie sua branch para o GitHub:
-
-git push origin nome-da-tarefa
+git add .
+git commit -m "Descrição da alteração"
+git push -u origin nome-da-branch
 
 
-Por exemplo:
-
-git push origin feature/login-usuario
-
-
-Na primeira vez que enviar a branch, pode ser necessário:
+Exemplo:
 
 git push -u origin feature/login-usuario
 
 
 Após o push, a branch estará disponível no GitHub.
 
-8. 📤 Criar o Pull Request
+📤 Pull Request
 
-Após enviar a branch para o GitHub, o programador deve abrir um Pull Request (PR).
+Depois de enviar a branch, crie um Pull Request (PR).
 
-O Pull Request deve ser direcionado para:
-
+Destino obrigatório
 main
 
 
 O Pull Request é a entrega oficial da tarefa.
 
-Ter o código funcionando apenas na máquina local não significa que a tarefa foi entregue.
+⚠️ Código funcionando apenas na máquina local não é considerado uma entrega.
 
-📍 Onde o programador deve entregar?
-
-A entrega oficial deve ser feita no repositório GitHub do EduConnect, através de um Pull Request direcionado para a branch:
-
-main
-
-
-O processo correto é:
-
-Código desenvolvido
-        ↓
-Testes realizados
-        ↓
-Commit criado
-        ↓
-Branch enviada para o GitHub
-        ↓
-Pull Request criado
-        ↓
-Responsável revisa
-        ↓
-Alterações solicitadas (se necessário)
-        ↓
-Aprovação
-        ↓
-Merge na main
-
-9. 📝 Preencher o Pull Request
-
-O Pull Request deve conter informações suficientes para que outra pessoa consiga entender o que foi desenvolvido.
-
+📝 Como preencher o Pull Request
 Título
 
-O título deve ser curto e objetivo.
+Use um título curto e objetivo.
 
 Exemplo:
 
-Implementação do sistema de login
-
-
-Outro exemplo:
-
-Correção do cadastro de alunos
+Implementa sistema de login
 
 Descrição
 
-A descrição deve informar:
+Informe:
 
 o que foi desenvolvido;
 qual problema foi resolvido;
-quais partes do sistema foram alteradas;
+quais áreas foram alteradas;
 como testar;
 observações importantes.
-Exemplo
+Modelo
 ## Alteração
 
 Implementado o sistema de login dos usuários.
@@ -355,176 +258,126 @@ Implementado o sistema de login dos usuários.
 ## Alterações realizadas
 
 - Criada tela de login
-- Criada validação de usuário
-- Integrado login com a API
-- Adicionado tratamento de erros
 - Implementada autenticação
+- Integrada API
+- Adicionado tratamento de erros
 
 ## Testes realizados
 
-- Login com usuário válido
-- Login com senha inválida
+- Login válido
+- Senha inválida
 - Usuário inexistente
 - Campos obrigatórios
-- Logout
 
 ## Observações
 
-A funcionalidade depende da API de autenticação estar disponível.
+Informações adicionais sobre a implementação.
 
-👀 10. Revisão do código
+👀 Revisão
 
-Depois que o Pull Request for criado, o responsável técnico ou pessoa designada deverá revisar o código.
+Todo Pull Request deverá passar por revisão.
 
-Durante a revisão poderão ser analisados:
+O responsável poderá:
 
+✅ aprovar;
+🔄 solicitar alterações;
+❌ rejeitar a implementação.
+
+A revisão pode verificar:
+
+funcionamento;
 qualidade do código;
 organização;
 segurança;
-funcionamento;
 desempenho;
-possíveis bugs;
-padrões utilizados;
+testes;
 documentação;
-testes.
+aderência aos requisitos.
+🔧 Alterações solicitadas
 
-O Pull Request poderá ser:
+Caso sejam solicitadas alterações, continue utilizando a mesma branch.
 
-✅ Aprovado
-
-O código está adequado e pode ser integrado.
-
-🔄 Alterações solicitadas
-
-O programador deverá corrigir os pontos indicados.
-
-❌ Rejeitado
-
-Caso a implementação não esteja de acordo com os requisitos, o responsável poderá solicitar que a tarefa seja refeita.
-
-🔧 11. Quando forem solicitadas alterações
-
-Não é necessário criar uma nova Pull Request.
-
-Continue trabalhando na mesma branch.
-
-Faça as correções:
+Após corrigir:
 
 git add .
-
-
-Depois:
-
 git commit -m "Corrige ajustes solicitados na revisão"
-
-
-E envie novamente:
-
 git push
 
 
-O Pull Request existente será atualizado automaticamente.
+O Pull Request será atualizado automaticamente.
 
-✅ 12. Aprovação e Merge
+Não é necessário criar outro Pull Request para a mesma tarefa.
 
-Após a revisão e aprovação, o Pull Request poderá ser integrado à main.
+🔀 Merge
 
-O merge deve ser realizado conforme as permissões e o processo definido pela empresa.
+Após a aprovação, o Pull Request poderá ser integrado à main.
 
-Após o merge, o programador deve atualizar sua cópia local:
+Depois do merge, atualize sua cópia local:
 
 git checkout main
 git pull origin main
 
-🚫 13. Não trabalhar diretamente na main
 
-A branch main deve representar uma versão estável do projeto.
+A main deve representar uma versão estável do projeto.
 
-Portanto:
+🔐 Segurança
+Nunca envie para o GitHub:
+❌ Senhas
+❌ Tokens
+❌ API Keys
+❌ Credenciais de banco de dados
+❌ Arquivos .env
+❌ Chaves privadas
+❌ Certificados privados
+❌ Dados confidenciais de clientes
+❌ Credenciais de serviços externos
+Variáveis de ambiente
 
-Não faça commits diretamente na main, salvo quando expressamente autorizado pelo responsável técnico.
+Utilize .env localmente.
 
-O desenvolvimento deve acontecer em branches próprias.
-
-🔐 14. Segurança
-
-É proibido enviar informações sensíveis para o GitHub.
-
-Nunca envie:
-
-senhas;
-tokens;
-API Keys;
-credenciais de banco de dados;
-arquivos .env;
-certificados privados;
-chaves privadas;
-informações confidenciais de clientes;
-dados pessoais desnecessários;
-credenciais de serviços externos.
-Arquivo .env
-
-Informações sensíveis devem ficar em variáveis de ambiente.
-
-Exemplo:
+Exemplo de .env.example:
 
 DATABASE_URL=
 API_KEY=
 JWT_SECRET=
 
 
-Os valores reais não devem ser enviados ao GitHub.
+⚠️ Os valores reais nunca devem ser enviados para o repositório.
 
-Quando necessário, utilize:
+📄 Documentação
 
-.env.example
+Alterações que modificam o funcionamento do sistema devem ser documentadas.
 
-
-Exemplo:
-
-DATABASE_URL=coloque_aqui
-API_KEY=coloque_aqui
-JWT_SECRET=coloque_aqui
-
-📄 15. Documentação
-
-Sempre que uma alteração modificar o funcionamento do sistema, a documentação também deverá ser atualizada.
-
-Documentações gerais devem ficar em:
+Documentações gerais:
 
 docs/
 
 
-Documentações específicas podem ficar junto ao respectivo módulo quando necessário.
-
-Exemplo:
+Documentações específicas podem ficar dentro do respectivo módulo:
 
 site/
-│
 ├── backend/
 │   └── README.md
-│
 ├── frontend/
 │   └── README.md
-│
 └── Server/
     └── README.md
 
-📦 16. Dependências
+📦 Dependências
 
-Ao adicionar uma nova biblioteca ou dependência ao projeto:
+Ao adicionar uma nova dependência:
 
-confirme se ela é realmente necessária;
+confirme se ela é necessária;
 utilize uma versão adequada;
-atualize o arquivo de dependências correspondente;
-teste o projeto após a instalação;
+atualize o arquivo de dependências;
+instale e teste;
 informe a alteração no Pull Request.
 
-Não adicione bibliotecas desnecessárias.
+Evite adicionar bibliotecas desnecessárias.
 
-🧹 17. Organização do código
+🧹 Organização
 
-O código deve ser mantido limpo e organizado.
+Mantenha o projeto limpo.
 
 Evite:
 
@@ -532,208 +385,113 @@ código duplicado;
 arquivos sem utilização;
 funções sem utilização;
 variáveis sem utilização;
-comentários desnecessários;
-código de teste esquecido;
 console.log() desnecessários;
-credenciais dentro do código;
-alterações fora do escopo da tarefa.
-🎯 18. Uma tarefa por branch
+código de teste esquecido;
+comentários desnecessários;
+alterações fora do escopo;
+arquivos temporários.
+🔀 Conflitos
 
-Sempre que possível, cada branch deve representar uma tarefa específica.
+Caso ocorram conflitos com a main:
 
-Exemplo correto
-feature/login-usuario
-
-
-Contendo apenas alterações relacionadas ao login.
-
-Evite
-
-Uma única branch contendo:
-
-Login
-Cadastro
-Dashboard
-Correção de menu
-Alteração de banco
-Atualização de documentação
-
-
-Isso dificulta a revisão e aumenta o risco de problemas.
-
-🔄 19. Atualizar a branch antes da entrega
-
-Caso a main tenha recebido novas alterações durante seu desenvolvimento, atualize sua branch antes de finalizar a tarefa.
-
-Primeiro:
-
-git checkout main
-git pull origin main
-
-
-Depois volte para sua branch:
-
-git checkout nome-da-sua-branch
-
-
-Atualize sua branch conforme o fluxo adotado pela equipe.
-
-Por exemplo, utilizando merge:
-
-git merge main
-
-
-Resolva eventuais conflitos e teste novamente o projeto antes de atualizar o Pull Request.
-
-⚠️ 20. Conflitos de código
-
-Caso o Git informe que existem conflitos, não simplesmente apague arquivos ou escolha alterações sem entender o que está acontecendo.
-
-O programador deve:
-
-identificar os arquivos em conflito;
-analisar as alterações;
-manter o código correto;
-remover os marcadores de conflito;
-testar o projeto;
-finalizar o merge.
+identifique os arquivos;
+analise as alterações;
+mantenha o código correto;
+remova os marcadores de conflito;
+teste o projeto;
+finalize o merge.
 
 Depois:
 
 git add .
-
 git commit -m "Resolve conflitos com a main"
-
 git push
 
-🗂️ 21. Organização das entregas
 
-Cada entrega deve permitir identificar facilmente:
+⚠️ Nunca resolva conflitos simplesmente apagando alterações sem verificar o impacto.
 
-quem desenvolveu;
-qual tarefa foi realizada;
-quais arquivos foram alterados;
-qual problema foi resolvido;
-como a alteração foi testada.
+📋 Checklist de entrega
 
-Por isso, o histórico do Git deve ser mantido organizado.
+Antes de criar o Pull Request:
 
-📋 22. Checklist antes de criar o Pull Request
-
-Antes de abrir o Pull Request, confirme:
-
+ Minha branch foi criada corretamente;
+ A main estava atualizada antes do desenvolvimento;
  O código foi testado;
  A funcionalidade está funcionando;
  Não existem erros conhecidos;
- Não existem erros de compilação;
- Não foram enviados arquivos .env;
- Não foram enviados dados sensíveis;
- Não foram enviadas senhas ou tokens;
+ Não existem arquivos .env;
+ Não existem senhas ou tokens;
+ Não existem dados sensíveis;
  O código está organizado;
- A documentação foi atualizada, quando necessário;
- As dependências foram atualizadas, quando necessário;
+ A documentação foi atualizada;
+ As dependências foram atualizadas, se necessário;
  O commit possui uma mensagem clara;
- A branch possui um nome adequado;
- O Pull Request foi criado para main;
- A descrição do Pull Request explica o que foi desenvolvido;
+ O Pull Request está direcionado para main;
+ O Pull Request possui uma descrição;
  Os testes realizados foram informados.
-📋 23. Checklist do responsável pela revisão
-
-O responsável pela revisão deverá verificar:
-
- A tarefa corresponde ao solicitado;
- O código está funcionando;
- Não existem alterações desnecessárias;
- Não existem informações sensíveis;
- O código segue o padrão do projeto;
- Não existem problemas evidentes de segurança;
- Os testes foram realizados;
- A documentação está adequada;
- O Pull Request está devidamente descrito.
-
-Após a aprovação:
-
-APROVADO → MERGE → MAIN
-
-🏆 24. Regra principal da EduConnect
-
-Todo desenvolvimento deve ser versionado no GitHub e entregue através de um Pull Request para a branch main, seguindo o processo de revisão definido pela EduConnect.
-
-A main deve permanecer estável.
-
-O programador deve desenvolver em sua própria branch, testar, realizar o commit, enviar a branch para o GitHub e criar o Pull Request.
-
-🔁 Resumo rápido
-
-Para uma nova funcionalidade:
-
-# 1. Atualizar a main
+🛠️ Comandos principais
+Atualizar a main
 git checkout main
 git pull origin main
 
-# 2. Criar uma branch
-git checkout -b feature/minha-funcionalidade
+Criar branch
+git checkout -b feature/minha-tarefa
 
-# 3. Desenvolver e testar
-
-# 4. Verificar alterações
+Ver status
 git status
+
+Ver alterações
 git diff
 
-# 5. Adicionar arquivos
+Adicionar arquivos
 git add .
 
-# 6. Criar commit
-git commit -m "Adiciona minha funcionalidade"
+Criar commit
+git commit -m "Descrição da alteração"
 
-# 7. Enviar para o GitHub
-git push -u origin feature/minha-funcionalidade
+Enviar branch
+git push -u origin feature/minha-tarefa
 
+Voltar para main
+git checkout main
 
-Depois:
+Atualizar main
+git pull origin main
 
-GitHub
-   ↓
-Pull Request
-   ↓
-main
-   ↓
-Revisão
-   ↓
-Aprovação
-   ↓
-Merge
+🚨 Regras obrigatórias
+1. Não trabalhar diretamente na main
 
-📌 Regras essenciais
-1. Nunca trabalhar diretamente na main
+Sempre utilize uma branch.
 
-Sempre crie uma branch.
+2. Testar antes de entregar
 
-2. Sempre testar antes de entregar
+Toda alteração deve ser testada.
 
-Código não testado não deve ser enviado para aprovação.
+3. Entregar através de Pull Request
 
-3. Sempre criar Pull Request
+A entrega oficial é o Pull Request direcionado para main.
 
-O Pull Request é a forma oficial de entrega.
+4. Não enviar informações sensíveis
 
-4. Nunca enviar informações sensíveis
-
-Senhas, tokens, chaves e .env não devem ir para o GitHub.
+Senhas, tokens, chaves e .env não devem ser enviados.
 
 5. Manter o código organizado
 
-Evite alterações que não estejam relacionadas à tarefa.
+Não faça alterações fora do escopo da tarefa.
 
-6. Descrever o que foi feito
+6. Documentar quando necessário
 
-Todo Pull Request deve explicar claramente as alterações.
+Alterações relevantes devem atualizar a documentação.
 
 7. Respeitar a revisão
 
-Alterações solicitadas devem ser corrigidas antes do merge.
+Solicitações de alteração devem ser corrigidas antes do merge.
 
-📞 Responsabilidade do programador
+8. Manter a main estável
+
+A main deve conter somente código revisado e aprovado.
+
+🏢 Responsabilidade do programador
 
 É responsabilidade do programador garantir que sua entrega:
 
@@ -743,61 +501,33 @@ esteja organizada;
 esteja documentada quando necessário;
 não contenha informações sensíveis;
 esteja na branch correta;
-tenha commits claros;
-possua um Pull Request devidamente preenchido.
-🏢 EduConnect
+possua commits claros;
+tenha um Pull Request devidamente preenchido;
+esteja pronta para revisão.
+📌 Regra principal
+
+Todo desenvolvimento do EduConnect deve ser realizado em uma branch própria, testado, versionado e entregue através de um Pull Request para a main.
+
+DESENVOLVER
+     ↓
+TESTAR
+     ↓
+COMMIT
+     ↓
+PUSH
+     ↓
+PULL REQUEST
+     ↓
+REVISÃO
+     ↓
+APROVAÇÃO
+     ↓
+MERGE → MAIN
+
+🚀 EduConnect
 
 Projeto: EduConnect
-Repositório: EduConnect
 Branch principal: main
+Repositório: GitHub
 
-A partir deste documento, este é o fluxo padrão recomendado para desenvolvimento e entrega das atualizações do projeto.
-
-🚀 Fluxo oficial
-┌──────────────────────┐
-│  Receber a tarefa    │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Atualizar a main     │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Criar uma branch     │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Desenvolver          │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Testar               │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Commit               │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Push para o GitHub   │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Pull Request → main  │
-└──────────┬───────────┘
-           ↓
-┌──────────────────────┐
-│ Revisão              │
-└──────────┬───────────┘
-           ↓
-      ┌────┴─────┐
-      │          │
-   Ajustes    Aprovado
-      │          │
-      ↓          ↓
-    Push       Merge
-      │          │
-      └────→ main ←────┘
-
-
-Este fluxo deve ser seguido para manter o projeto EduConnect organizado, seguro e rastreável.
+Código desenvolvido localmente não é considerado entregue. A entrega oficial acontece através do Pull Request no GitHub.
