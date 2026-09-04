@@ -1,0 +1,10 @@
+1 - Criar uma Landing page para uma escola;
+2 - Comentar o código;
+3 - Modo Dark - Light
+4 - Tratar dados;
+5 - Responsividade do site;
+6 - Inicio do JS;
+7 - Editar o documento colocando os elementos do wireframe, os textos explicativos de cada um;
+
+
+obs: Ao criar a landing page, deixar espaço ou criar caminho para o mapa (obrigatório); Ao usar o php, tomar cuidado pois funções e regras de negocio tem que serem feitas com js, Ex: todos os requisitos seguindo o documento; O php vai ser usado também em REST, mas espere ele explicar em aula!
